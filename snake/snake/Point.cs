@@ -12,11 +12,6 @@ namespace snake
         public int y;
         public char sym;
 
-        public Point()//конструктор
-        {
-            Console.WriteLine("Создается новая точка");
-        }
-
         public Point(int _x, int _y, char _sym)//конструктор класса
         {
             x = _x;
