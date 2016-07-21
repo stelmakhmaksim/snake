@@ -12,7 +12,19 @@ namespace snake
         public int y;
         public char sym;
 
-        public void Draw()//метод класса
+        public Point()//конструктор
+        {
+            Console.WriteLine("Создается новая точка");
+        }
+
+        public Point(int _x, int _y, char _sym)//конструктор класса
+        {
+            x = _x;
+            y = _y;
+            sym = _sym;
+        }
+
+        public void Draw()//метод класса или функция
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
