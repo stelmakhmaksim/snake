@@ -8,11 +8,11 @@ namespace snake
 {
     class Point
     {
-        public int x;
+        public int x;//объект класса
         public int y;
         public char sym;
 
-        public void Draw()
+        public void Draw()//метод класса
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
