@@ -34,11 +34,35 @@ namespace snake
 
             p1 = new Point(1, 3, '*');
             Update(p1);
-            Console WriteLine("Call Update. p1.x = " + p1.x + ",p1.y = " + p1.y );
+            Console.WriteLine("Call Update. p1.x = " + p1.x + ", p1.y = " + p1.y );
 
-            Console.ReadLine;
+            Console.ReadLine();
         }
 
         public static void Func1(int value)
+        {
+
+        }
+
+        public static void Func2(int value)
+        {
+            value += 1;
+        }
+
+        public static void Func3(int x)
+        {
+            x += 1;
+        }
+
+        public static void Move(Point p, int dx, int dy)
+        {
+            p.x = p.x + dx;
+            p.y = p.y + dy;
+        }
+
+        public static void Update(Point p)
+        {
+            p = new Point();
+        }
     }
 }

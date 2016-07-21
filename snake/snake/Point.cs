@@ -19,6 +19,11 @@ namespace snake
             sym = _sym;
         }
 
+        public Point()
+        {
+
+        }
+
         public void Draw()//метод класса или функция
         {
             Console.SetCursorPosition(x, y);
