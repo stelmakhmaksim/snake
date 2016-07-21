@@ -14,11 +14,9 @@ namespace snake
             Func1(x);
             Console.WriteLine("Call Func1. x = " + x);
 
-            x = 1;
             Func2(x);
             Console.WriteLine("Call Func2. x = " + x);
 
-            x = 1;
             Func3(x);
             Console.WriteLine("Call Func3. x = " + x);
 
@@ -46,7 +44,7 @@ namespace snake
 
         public static void Func2(int value)
         {
-            value += 1;
+            value+=1;
         }
 
         public static void Func3(int x)
