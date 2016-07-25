@@ -10,22 +10,34 @@ namespace snake
     {
         static void Main(string[] args)
         {
-            HorizontalLine h1line = new HorizontalLine(0, 79, 0, '+');
-            h1line.DrawLine();
-            HorizontalLine h2line = new HorizontalLine(0, 79, 24, '+');
-            h2line.DrawLine();
+            Console.SetBufferSize(80, 25);//установим фиксированный размер окна для избежания перемотки
 
-            VerticalLine v1line = new VerticalLine(0, 24, 0, '+');
-            v1line.DrawLine();
-            VerticalLine v2line = new VerticalLine(0, 24, 79, '+');
-            v2line.DrawLine();
+            //отрисовка рамки
+            HorizontalLine topLine = new HorizontalLine(0, 79, 2, '+');
+            HorizontalLine bottomLine = new HorizontalLine(0, 79, 24, '+');
+            VerticalLine leftLine = new VerticalLine(1, 23, 0, '+');
+            VerticalLine rightLine = new VerticalLine(1, 23, 79, '+');
+            topLine.DrawLine();
+            bottomLine.DrawLine();
+            leftLine.DrawLine();
+            rightLine.DrawLine();
 
-            DiagonalLine d1line = new DiagonalLine(0, 79, 0, 24, '+');
-            d1line.DrawLine();
-            DiagonalLine d2line = new DiagonalLine(54, 79, 0, 24, '+','2');
-            d2line.DrawLine();
+            //отрисовка точек
+            Point p = new Point(5, 5, '*');
+            p.Draw();
+
+            Emploee e = new Emploee();
+            e.age = 42;
+            e.pay = 30000;
+            e.weight = 72;
+            e.hight = 178;
+            e.expirence = 5;
+
+            Console.Write(e.age);
 
             Console.ReadLine();
         }
     }
 }
+//наследование-это свойство системы, позволяющее писать новый класс на основе уже существующего,
+//частично или полностью замещающейся функциональностью
