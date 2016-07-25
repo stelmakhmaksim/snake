@@ -26,15 +26,6 @@ namespace snake
             Point p = new Point(5, 5, '*');
             p.Draw();
 
-            Emploee e = new Emploee();
-            e.age = 42;
-            e.pay = 30000;
-            e.weight = 72;
-            e.hight = 178;
-            e.expirence = 5;
-
-            Console.Write(e.age);
-
             Console.ReadLine();
         }
     }
