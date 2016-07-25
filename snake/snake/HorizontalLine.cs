@@ -10,15 +10,21 @@ namespace snake
     {
         List<Point> pList;
 
-        public HorizontalLine()
+        public HorizontalLine(int xLeft, int xRight, int y, char sym)//конструктор используется для инициализации свойств объекта,
+                                                                     //поэтому выводить результат в нём не надо
         {
-            Point p1 = new Point(4, 5, '+');
-            Point p2 = new Point(5, 5, '+');
-            Point p3 = new Point(6, 5, '+');
+            pList=new List<Point>();
+            for (int x = xLeft; x <= xRight; x++)
+            {
+                Point p = new Point(x, y, '+');
+                pList.Add(p);
+            }
 
-            pList.Add(p1);
-            pList.Add(p2);
-            pList.Add(p3);
+            foreach (Point p in pList)
+            {
+                p.Draw();
+            }
+            
         }
 
         public void DrawLine()
