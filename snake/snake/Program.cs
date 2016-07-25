@@ -24,11 +24,10 @@ namespace snake
 
             //отрисовка точек
             Point p = new Point(5, 5, '*');
-            p.Draw();
+            Snake snake = new Snake(p, 4, Directions.right);
+            snake.DrawLine();
 
             Console.ReadLine();
         }
     }
 }
-//наследование-это свойство системы, позволяющее писать новый класс на основе уже существующего,
-//частично или полностью замещающейся функциональностью
