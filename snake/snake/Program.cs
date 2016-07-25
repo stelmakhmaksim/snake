@@ -22,7 +22,6 @@ namespace snake
 
             DiagonalLine d1line = new DiagonalLine(0, 79, 0, 24, '+');
             d1line.DrawLine();
-
             DiagonalLine d2line = new DiagonalLine(54, 79, 0, 24, '+','2');
             d2line.DrawLine();
 
