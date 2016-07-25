@@ -13,7 +13,7 @@ namespace snake
             Point p1 = new Point(1, 3, '*');//новая точка + функция(конструктор), которая заходит в конструктор в классе
             //p1.Draw();
 
-            Point p2 = new Point(4, 5, '#');
+            Point p2 = new Point(4, 5, '#');//объекты класса поинт
             //p2.Draw();
 
             Point p3 = new Point(7, 8, '*');

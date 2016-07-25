@@ -8,7 +8,7 @@ namespace snake
 {
     class Point
     {
-        public int x;//объект класса
+        public int x;//данные класса
         public int y;
         public char sym;
 
