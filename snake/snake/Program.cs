@@ -10,15 +10,21 @@ namespace snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');//новая точка + функция(конструктор), которая заходит в конструктор в классе
-            //p1.Draw();
+            HorizontalLine h1line = new HorizontalLine(0, 79, 0, '+');
+            h1line.DrawLine();
+            HorizontalLine h2line = new HorizontalLine(0, 79, 24, '+');
+            h2line.DrawLine();
 
-            Point p2 = new Point(4, 5, '#');//экземпляры класса - объекты класса поинт
-            //p2.Draw();
+            VerticalLine v1line = new VerticalLine(0, 24, 0, '+');
+            v1line.DrawLine();
+            VerticalLine v2line = new VerticalLine(0, 24, 79, '+');
+            v2line.DrawLine();
 
-            HorizontalLine line = new HorizontalLine(0,5,8,'+');
-            line.DrawLine();
+            DiagonalLine d1line = new DiagonalLine(0, 79, 0, 24, '+');
+            d1line.DrawLine();
 
+            DiagonalLine d2line = new DiagonalLine(54, 79, 0, 24, '+','2');
+            d2line.DrawLine();
 
             Console.ReadLine();
         }

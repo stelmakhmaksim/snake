@@ -6,21 +6,19 @@ using System.Threading.Tasks;
 
 namespace snake
 {
-    class HorizontalLine
+    class VerticalLine
     {
         List<Point> pList;
 
-        public HorizontalLine(int xLeft, int xRight, int y, char sym)//конструктор используется для инициализации свойств объекта,
-        //поэтому выводить результат в нём не надо
+        public VerticalLine(int yTop, int yBottom, int x, char sym)
         {
             pList = new List<Point>();
-            for (int x = xLeft; x <= xRight; x++)
+            for (int y = yTop; y <= yBottom; y++)
             {
                 Point p = new Point(x, y, '+');
                 pList.Add(p);
             }
         }
-
         public void DrawLine()
         {
             foreach (Point p in pList)
