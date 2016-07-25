@@ -13,36 +13,12 @@ namespace snake
             Point p1 = new Point(1, 3, '*');//новая точка + функция(конструктор), которая заходит в конструктор в классе
             //p1.Draw();
 
-            Point p2 = new Point(4, 5, '#');//объекты класса поинт
+            Point p2 = new Point(4, 5, '#');//экземпляры класса - объекты класса поинт
             //p2.Draw();
 
-            Point p3 = new Point(7, 8, '*');
-            Point p4 = new Point(10, 11, '#');
+            HorizontalLine line = new HorizontalLine(0,5,8,'+');
+            line.DrawLine();
 
-            List<char> numList = new List<char>();
-            numList.Add('*');
-            numList.Add('#');
-
-            char x = numList[0];
-            char y = numList[1];
-
-            foreach(char i in numList)
-            {
-                Console.WriteLine(i);
-            }
-
-            numList.RemoveAt(0);
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-            pList.Add(p3);
-            pList.Add(p4);
-
-            foreach (Point i in pList)
-            {
-                i.Draw();
-            }
 
             Console.ReadLine();
         }
