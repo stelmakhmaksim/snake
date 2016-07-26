@@ -55,11 +55,15 @@ namespace snake
             Console.Write(sym);
         }
 
-        public override string ToString()//override - переопределение, чтобы в отладчике было легче смотреть на значение переменной point
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
+
+        public override string ToString()//override - переопределение, чтобы в отладчике было легче смотреть на значение переменной Point
         {
             return x + ", " + y + ", " + sym;
         }
-
-
     }
 }
