@@ -39,6 +39,7 @@ namespace snake
             Thread.Sleep(300);
             snake.Move();
             Thread.Sleep(300);
+
             Console.ReadLine();
         }
     }
