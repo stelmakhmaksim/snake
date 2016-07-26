@@ -8,7 +8,7 @@ namespace snake
 {
     class Snake : Figure
     {
-        Directions direction;
+        public Directions direction;
 
         public Snake(Point tail, int lenght, Directions _direction)
         {
@@ -40,6 +40,17 @@ namespace snake
             nextPoint.Move(1, direction);
             return nextPoint;
         }
+
+        public void pressed_key(ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow)
+                direction = Directions.left;
+            else if (key == ConsoleKey.RightArrow)
+                direction = Directions.right;
+            else if (key == ConsoleKey.UpArrow)
+                direction = Directions.up;
+            else if (key == ConsoleKey.DownArrow)
+                direction = Directions.down;
+        }
     }
 }
-//абстрагирование-способ выделить набор значимых характеристик объекта, исключая из рассмотрения незначимые
