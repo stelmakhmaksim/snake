@@ -13,21 +13,19 @@ namespace snake
             pList = new List<Point>();
             for (int x = xLeft; x <= xRight; x++)
             {
-                Point p = new Point(x, y, '+');
+                Point p = new Point(x, y, sym);
                 pList.Add(p);
             }
         }
 
-        public override void DrawLine()
+        public override void DrawLine()// override для переопределения метода
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-
-            foreach(Point p in pList)
+            base.DrawLine();//реализация базового класса фигуры, метода DrawLine
+            /*foreach(Point p in pList)
             {
                 p.Draw();
-            }
-
-            //base.DrawLine();
+            }*/
 
             Console.ForegroundColor = ConsoleColor.White;
         }
