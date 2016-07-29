@@ -53,15 +53,15 @@ namespace snake
                 direction = Directions.down;
         }
 
-
-
         internal bool Eat(Point food)
         {
             Point head = GetNextPoint();
             if (head.IsHit(food))
-            //if(head.x ==food.x && heat.y==food.y)
+            //if(head.x ==food.x && head.y==food.y)
             {
+                head.Draw();
                 food.sym = head.sym;
+                //food.Draw();
                 pList.Add(food);
                 return true;
             }
