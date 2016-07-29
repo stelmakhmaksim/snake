@@ -13,27 +13,26 @@ namespace snake
         {
             Console.SetBufferSize(80, 25);//установим фиксированный размер окна для избежания перемотки
 
-            //отрисовка рамки
-            HorizontalLine topLine = new HorizontalLine(0, 79, 2, '+');
-            HorizontalLine bottomLine = new HorizontalLine(0, 79, 24, '+');
-            VerticalLine leftLine = new VerticalLine(1, 23, 0, '+');
-            VerticalLine rightLine = new VerticalLine(1, 23, 79, '+');
-            topLine.DrawLine();
-            bottomLine.DrawLine();
-            leftLine.DrawLine();
-            rightLine.DrawLine();
+            Walls walls = new Walls(80, 25);
+            walls.Draw();
 
             //отрисовка точек
-            Point p = new Point(5, 5, '*');
+            Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Directions.right);
             snake.DrawLine();
 
             FoodCreator foodCreator = new FoodCreator(80, 25, '$');
             Point food = foodCreator.CreateFood();
             food.Draw();
+
             while (true)
             {
-                if(snake.Eat(food))
+                if (walls.IsHit(snake) || snake.IsHitTail())
+                {
+                    break;
+                }
+
+                if (snake.Eat(food))
                 {
                     food = foodCreator.CreateFood();
                     food.Draw();
@@ -45,10 +44,12 @@ namespace snake
 
                 Thread.Sleep(100);
 
-                if(Console.KeyAvailable)
+                if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.pressed_key(key.Key);
+                    if (key.Key == ConsoleKey.Escape)
+                        break;
                 }
             }
         }

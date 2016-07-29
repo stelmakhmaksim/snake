@@ -41,16 +41,42 @@ namespace snake
             return nextPoint;
         }
 
-        public void pressed_key(ConsoleKey key)
+        internal bool IsHitTail()
+        {
+            var head = pList.Last();
+            for (int i = 0; i < pList.Count - 2; i++)
+            {
+                if (head.IsHit(pList[i]))
+                    return true;
+            }
+            return false;
+        }
+
+        public bool pressed_key(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow)
+            {
                 direction = Directions.left;
+                return true;
+            }
             else if (key == ConsoleKey.RightArrow)
+            {
                 direction = Directions.right;
+                return true;
+            }
             else if (key == ConsoleKey.UpArrow)
+            {
                 direction = Directions.up;
+                return true;
+            }
             else if (key == ConsoleKey.DownArrow)
+            {
                 direction = Directions.down;
+                return true;
+            }
+            else if (key == ConsoleKey.Escape)
+                return false;
+            return true;
         }
 
         internal bool Eat(Point food)
