@@ -30,13 +30,13 @@ namespace snake
             {
                 f.DrawLine();
             }
+
+            Console.ReadLine();
         }
 
         static void Draw(Figure figure)
         {
             figure.DrawLine();
-        }
-
-        Console Read();
+        }   
     }
 }
