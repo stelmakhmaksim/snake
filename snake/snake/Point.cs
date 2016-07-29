@@ -38,7 +38,7 @@ namespace snake
                 x = x - offset;
             }
 
-            if (direction == Directions.up)
+            else if (direction == Directions.up)
             {
                 y = y - offset;
             }

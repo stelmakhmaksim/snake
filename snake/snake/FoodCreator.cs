@@ -15,7 +15,7 @@ namespace snake
 
         public FoodCreator(int mapWidth, int mapHeight, char sym)
         {
-            this.mapWidth = mapWidth;
+            this.mapWidth = mapWidth;//this. задействуется переменная, которая инициализирована  в этом классе
             this.mapHeight = mapHeight;
             this.sym = sym;
         }
