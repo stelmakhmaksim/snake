@@ -61,7 +61,6 @@ namespace snake
             {
                 head.Draw();
                 food.sym = head.sym;
-                //food.Draw();
                 pList.Add(food);
                 return true;
             }
