@@ -20,17 +20,17 @@ namespace snake
         {
             foreach (var p in pList)
             {
-                if (figure.IsHit(p))
+                if (figure.IsHit(p))// змейка, пересекаешься ли ты с какой-либо точкой?
                     return true;
             }
             return false;
         }
 
-        private bool IsHit(Point point)
+        public bool IsHit(Point point)
         {
             foreach (var p in pList)
             {
-                if (p.IsHit(point))
+                if (p.IsHit(point))//точка змейки пересекаешься ли ты с точкой линии
                     return true;
             }
             return false;

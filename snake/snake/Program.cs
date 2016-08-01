@@ -22,7 +22,7 @@ namespace snake
             snake.DrawLine();
 
             FoodCreator foodCreator = new FoodCreator(80, 25, '$');
-            Point food = foodCreator.CreateFood();
+            Point food = foodCreator.CreateFood(walls);
             food.Draw();
 
             while (true)
@@ -34,7 +34,7 @@ namespace snake
 
                 if (snake.Eat(food))
                 {
-                    food = foodCreator.CreateFood();
+                    food = foodCreator.CreateFood(snake);
                     food.Draw();
                 }
                 else

@@ -20,11 +20,28 @@ namespace snake
             this.sym = sym;
         }
 
-        public Point CreateFood()
+        public Point CreateFood(Walls walls)
         {
-            int x = random.Next(2, mapWidth - 2);
-            int y = random.Next(2, mapHeight - 2);
-            return new Point(x, y, sym);
+            Point food;
+            do
+            {
+                int x = random.Next(2, mapWidth - 2);
+                int y = random.Next(2, mapHeight - 2);
+                food = new Point(x, y, sym);
+            } while (walls.IsHit(food));
+            return food;
+        }
+
+        public Point CreateFood(Figure snake)
+        {
+            Point food;
+            do
+            {
+                int x = random.Next(2, mapWidth - 2);
+                int y = random.Next(2, mapHeight - 2);
+                food = new Point(x, y, sym);
+            } while (snake.IsHit(food));
+            return food;
         }
     }
 }

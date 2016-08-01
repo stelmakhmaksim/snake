@@ -28,12 +28,20 @@ namespace snake
         {
             foreach (var wall in wallist)
             {
-                if (wall.IsHit(figure))
+                if (wall.IsHit(figure))//линия, пересекаешься ли ты со змейкой
                     return true;
             }
             return false;
         }
-
+        internal bool IsHit(Point p)
+        {
+            foreach (var wall in wallist)
+            {
+                if (wall.IsHit(p))//линия, пересекаешься ли ты со змейкой
+                    return true;
+            }
+            return false;
+        }
         public void Draw()
         {
             foreach (var wall in wallist)
